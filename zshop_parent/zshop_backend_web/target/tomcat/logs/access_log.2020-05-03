@@ -1,0 +1,14 @@
+0:0:0:0:0:0:0:1 - - [03/May/2020:15:36:44 +0800] "GET / HTTP/1.1" 200 4044 http-bio-9001-exec-2 1837
+0:0:0:0:0:0:0:1 - - [03/May/2020:15:36:56 +0800] "GET / HTTP/1.1" 200 4044 http-bio-9001-exec-4 17
+0:0:0:0:0:0:0:1 - - [03/May/2020:15:36:56 +0800] "GET /css/bootstrapValidator.min.css HTTP/1.1" 200 694 http-bio-9001-exec-7 36
+0:0:0:0:0:0:0:1 - - [03/May/2020:15:36:56 +0800] "GET /css/bootstrap.min.css HTTP/1.1" 200 121205 http-bio-9001-exec-6 44
+0:0:0:0:0:0:0:1 - - [03/May/2020:15:36:56 +0800] "GET /css/mycss.css HTTP/1.1" 200 1573 http-bio-9001-exec-5 43
+0:0:0:0:0:0:0:1 - - [03/May/2020:15:36:56 +0800] "GET /css/zshop.css HTTP/1.1" 200 316 http-bio-9001-exec-8 37
+0:0:0:0:0:0:0:1 - - [03/May/2020:15:36:56 +0800] "GET /js/jquery.min.js HTTP/1.1" 200 95997 http-bio-9001-exec-10 6
+0:0:0:0:0:0:0:1 - - [03/May/2020:15:36:56 +0800] "GET /js/bootstrap.min.js HTTP/1.1" 200 37051 http-bio-9001-exec-5 7
+0:0:0:0:0:0:0:1 - - [03/May/2020:15:36:56 +0800] "GET /layer/layer.js HTTP/1.1" 200 22116 http-bio-9001-exec-9 4
+0:0:0:0:0:0:0:1 - - [03/May/2020:15:36:56 +0800] "GET /js/bootstrapValidator.min.js HTTP/1.1" 200 110933 http-bio-9001-exec-8 6
+0:0:0:0:0:0:0:1 - - [03/May/2020:15:36:57 +0800] "GET /layer/theme/default/layer.css?v=3.1.1 HTTP/1.1" 200 14367 http-bio-9001-exec-9 4
+0:0:0:0:0:0:0:1 - - [03/May/2020:15:36:57 +0800] "GET /images/backimage.jpg HTTP/1.1" 200 203417 http-bio-9001-exec-9 8
+0:0:0:0:0:0:0:1 - - [03/May/2020:15:37:00 +0800] "GET /backend/code/image HTTP/1.1" 200 1697 http-bio-9001-exec-8 3136
+0:0:0:0:0:0:0:1 - - [03/May/2020:15:37:00 +0800] "GET /favicon.ico HTTP/1.1" 404 949 http-bio-9001-exec-8 6

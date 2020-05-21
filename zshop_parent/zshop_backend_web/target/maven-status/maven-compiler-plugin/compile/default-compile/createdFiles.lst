@@ -1,0 +1,5 @@
+cn/timetell/zshop/backend/controller/CodeController.class
+cn/timetell/zshop/backend/controller/SysuserController.class
+cn/timetell/zshop/backend/controller/ProductController.class
+cn/timetell/zshop/backend/vo/ProductVo.class
+cn/timetell/zshop/backend/controller/ProductTypeController.class

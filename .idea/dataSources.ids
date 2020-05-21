@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - zshop@localhost" uuid="b21ab5ae-b221-472e-a54d-6a7e3b077f00">
+    <database-info product="MySQL" version="8.0.15" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.47 ( Revision: fe1903b1ecb4a96a917f7ed3190d80c049b1de29 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <schema name="" catalog="zshop"/>
+    <table name="t_customer" schema="" catalog="zshop" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="login_name" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="password" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="phone" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="address" sqlType="VARCHAR" precision="30" scale="0" nullable="true" jdbcType="12"/>
+      <column name="is_valid" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="regist_date" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="t_order_ibfk_1" table="t_order" schema="" catalog="zshop" columns="customer_id"/>
+      <index name="login_name" unique="true" columns="login_name"/>
+    </table>
+    <table name="t_item" schema="" catalog="zshop" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="product_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="num" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="price" sqlType="DOUBLE" precision="22" scale="0" nullable="true" jdbcType="8"/>
+      <column name="order_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="t_item_ibfk_1" columns="product_id" ref-table="t_product" ref-schema="" ref-catalog="zshop" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="t_item_ibfk_2" columns="order_id" ref-table="t_order" ref-schema="" ref-catalog="zshop" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+    </table>
+    <table name="t_order" schema="" catalog="zshop" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="no" sqlType="VARCHAR" precision="300" scale="0" nullable="true" jdbcType="12"/>
+      <column name="customer_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="price" sqlType="DOUBLE" precision="22" scale="0" nullable="true" jdbcType="8"/>
+      <column name="create_date" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="t_order_ibfk_1" columns="customer_id" ref-table="t_customer" ref-schema="" ref-catalog="zshop" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="t_item_ibfk_2" table="t_item" schema="" catalog="zshop" columns="order_id"/>
+    </table>
+    <table name="t_product" schema="" catalog="zshop" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="200" scale="0" nullable="false" jdbcType="12"/>
+      <column name="price" sqlType="DOUBLE" precision="22" scale="0" nullable="true" jdbcType="8"/>
+      <column name="info" sqlType="VARCHAR" precision="200" scale="0" nullable="true" jdbcType="12"/>
+      <column name="image" sqlType="VARCHAR" precision="200" scale="0" nullable="true" jdbcType="12"/>
+      <column name="product_type_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="t_product_ibfk_1" columns="product_type_id" ref-table="t_product_type" ref-schema="" ref-catalog="zshop" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="t_item_ibfk_1" table="t_item" schema="" catalog="zshop" columns="product_id"/>
+      <index name="name" unique="true" columns="name"/>
+    </table>
+    <table name="t_product_type" schema="" catalog="zshop" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="200" scale="0" nullable="false" jdbcType="12"/>
+      <column name="status" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="t_product_ibfk_1" table="t_product" schema="" catalog="zshop" columns="product_type_id"/>
+      <index name="name" unique="true" columns="name"/>
+    </table>
+    <table name="t_role" schema="" catalog="zshop" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="role_name" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="t_sysuser_ibfk_1" table="t_sysuser" schema="" catalog="zshop" columns="role_id"/>
+      <index name="role_name" unique="true" columns="role_name"/>
+    </table>
+    <table name="t_sysuser" schema="" catalog="zshop" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="login_name" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="password" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="phone" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="email" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="is_valid" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="create_date" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="role_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="t_sysuser_ibfk_1" columns="role_id" ref-table="t_role" ref-schema="" ref-catalog="zshop" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="login_name" unique="true" columns="login_name"/>
+    </table>
+  </data-source>
+</component>

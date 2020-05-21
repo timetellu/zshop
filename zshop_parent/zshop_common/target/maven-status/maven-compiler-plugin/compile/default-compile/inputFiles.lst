@@ -1,0 +1,13 @@
+/Applications/IntelliJ IDEA.app/Contents/IdeaProject/zshop/zshop_parent/zshop_common/src/main/java/cn/timetell/zshop/common/util/StringUtils.java
+/Applications/IntelliJ IDEA.app/Contents/IdeaProject/zshop/zshop_parent/zshop_common/src/main/java/cn/timetell/zshop/common/exception/SysuserNotExistException.java
+/Applications/IntelliJ IDEA.app/Contents/IdeaProject/zshop/zshop_parent/zshop_common/src/main/java/cn/timetell/zshop/common/exception/LoginErrorException.java
+/Applications/IntelliJ IDEA.app/Contents/IdeaProject/zshop/zshop_parent/zshop_common/src/main/java/cn/timetell/zshop/common/constant/CustomerConstant.java
+/Applications/IntelliJ IDEA.app/Contents/IdeaProject/zshop/zshop_parent/zshop_common/src/main/java/cn/timetell/zshop/common/constant/SysuserConstant.java
+/Applications/IntelliJ IDEA.app/Contents/IdeaProject/zshop/zshop_parent/zshop_common/src/main/java/cn/timetell/zshop/common/constant/ProductTypeConstant.java
+/Applications/IntelliJ IDEA.app/Contents/IdeaProject/zshop/zshop_parent/zshop_common/src/main/java/cn/timetell/zshop/common/util/ResponseResult.java
+/Applications/IntelliJ IDEA.app/Contents/IdeaProject/zshop/zshop_parent/zshop_common/src/main/java/cn/timetell/zshop/common/exception/ProductTypeExistException.java
+/Applications/IntelliJ IDEA.app/Contents/IdeaProject/zshop/zshop_parent/zshop_common/src/main/java/cn/timetell/zshop/common/exception/PhoneNotRegistException.java
+/Applications/IntelliJ IDEA.app/Contents/IdeaProject/zshop/zshop_parent/zshop_common/src/main/java/cn/timetell/zshop/common/constant/PaginationConstant.java
+/Applications/IntelliJ IDEA.app/Contents/IdeaProject/zshop/zshop_parent/zshop_common/src/main/java/cn/timetell/zshop/common/util/RedisUtils.java
+/Applications/IntelliJ IDEA.app/Contents/IdeaProject/zshop/zshop_parent/zshop_common/src/main/java/cn/timetell/zshop/common/util/SpringBeanHolder.java
+/Applications/IntelliJ IDEA.app/Contents/IdeaProject/zshop/zshop_parent/zshop_common/src/main/java/cn/timetell/zshop/common/constant/ResponseStatusConstant.java
