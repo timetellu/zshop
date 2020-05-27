@@ -36,7 +36,7 @@ public class ProductTypeController {
         //查找所有商品类型
         List<ProductType> productTypes = productTypeService.findAll();
         //将查询到的结果传给PageInfo
-        PageInfo<ProductType> pageInfo = new PageInfo<ProductType>(productTypes);
+        PageInfo<ProductType> pageInfo = new PageInfo<>(productTypes);
 //        pageInfo.getPages();
 //        pageInfo.getList();
         model.addAttribute("pageInfo",pageInfo);
